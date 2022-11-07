@@ -206,8 +206,10 @@ $(aws ecr get-login --no-include-email --region eu-central-1)
 
 **using AWS CLI V2.x**
 
+Getting authentication token and authenticate Docker
 ```bash
-  aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin $ECRHOST
+aws ecr get-login-password --region ap-southeast-2 --profile <YOUR_PROFILE>| docker login --username AWS --password-stdin 725119571431.dkr.ecr.ap-southeast-2.amazonaws.com
+
 ```
 
 read more [here](https://github.com/aws/containers-roadmap/issues/735).
